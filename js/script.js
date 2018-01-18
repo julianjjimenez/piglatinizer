@@ -5,23 +5,23 @@
 // CREATE THE FUNCTIONS BELOW
 
 // Document Ready Function. All of your jQuery should go in here. 
-$( document ).ready(function() {
-  
-
-
-
+$(document).ready(function() {
+	$ latinWord= $("input").val())
+	
+	
+ 
 });
 
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
-
+function wordToPigLatin(word) {
+	return word + "ay";
+}
 
 
 
 
 
 // Create the sentenceToPigLatin function that takes a sentence as a parameter
-	//Loops through all the words in the sentence and transforms each word
-	//It should return a transfromed sentance
-
-
+//Loops through all the words in the sentence and transforms each word
+//It should return a transfromed sentance
