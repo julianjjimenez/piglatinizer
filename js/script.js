@@ -9,8 +9,8 @@ $(document).ready(function() {
 
 	$("button").click(function() {
 		var latinWord = $("input").val();
-		var array= sentenceToPigLatin (latinWord);
-		
+		var array = sentenceToPigLatin(latinWord);
+
 
 
 	});
@@ -19,11 +19,22 @@ $(document).ready(function() {
 
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
-function wordToPigLatin(word) {
-	return word + "ay";
+function consonantWordToPigLatin(word) {
+	var firstLetter = word.slice(1, 2);
+	var restOfWord = word.slice(2, word.length);
+	return word + res + "ay";
 }
+function vowelWordToPigLatin(word) {
+	return word + "yay";
+}
+function isVowel(word) {
+	var firstLetter = word.slice(1, 2);
+	return ['a', 'e', 'i', 'o', 'u'].includes(firstLetter)
 
-
+}
+function wordToPigLatin(word) {
+	
+}
 
 
 
@@ -32,5 +43,9 @@ function wordToPigLatin(word) {
 //It should return a transfromed sentance
 
 function sentenceToPigLatin(sentence) {
-	return sentence.split(" ");
+	var words = sentence.split(" ");
+	for (var i = 0; i < sentence.length; i++) {
+		words[i] = wordsToPigLatin(words[i]);
+	}
+	return words.join(' ');
 }
